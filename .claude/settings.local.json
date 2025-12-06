@@ -7,7 +7,8 @@
       "Bash(git rev-parse --abbrev-ref HEAD)",
       "Bash(git add .)",
       "Bash(git checkout -b update-constitution-physical-ai-textbook)",
-      "Bash(git commit -m \"feat(constitution): update constitution for Physical AI & Humanoid Robotics textbook project\n\nUpdate the project constitution with specific requirements for the hackathon project creating a textbook for teaching Physical AI & Humanoid Robotics. The new constitution includes core principles, key standards, constraints, and success criteria specific to this educational AI project.\")"
+      "Bash(git commit -m \"feat(constitution): update constitution for Physical AI & Humanoid Robotics textbook project\n\nUpdate the project constitution with specific requirements for the hackathon project creating a textbook for teaching Physical AI & Humanoid Robotics. The new constitution includes core principles, key standards, constraints, and success criteria specific to this educational AI project.\")",
+      "Bash(git push -u origin update-constitution-physical-ai-textbook)"
     ],
     "deny": [],
     "ask": []
