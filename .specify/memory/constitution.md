@@ -1,9 +1,9 @@
 # Constitution: Physical AI & Humanoid Robotics Textbook
 
 ## Project Overview
-Project: Hackathon I: Create a Textbook for Teaching Physical AI & Humanoid Robotics Course
+Project: Create a Textbook for Teaching Physical AI & Humanoid Robotics Course
 
-This constitution governs the development of an AI-native textbook deployed as a dynamic web application. It ensures high-quality content, robust technical implementation, and integration of interactive AI features to support Panaversity's mission of teaching cutting-edge AI skills. Participants must adhere to this framework to maximize scoring (base 100 points + up to 200 bonus points) and demonstrate readiness for potential roles in the Panaversity ecosystem.
+This constitution governs the development of an AI-native textbook deployed as a dynamic web application. It ensures high-quality content, robust technical implementation, and integration of interactive AI features to support Panaversity's mission of teaching cutting-edge AI skills. All development must adhere to this framework to ensure quality and consistency.
 
 ## Core Principles
 
@@ -51,7 +51,7 @@ This constitution governs the development of an AI-native textbook deployed as a
 4. **Tech Stack**: Must use Spec-Kit Plus, Claude Code for book creation; OpenAI Agents/ChatKit SDKs, FastAPI, Neon Serverless Postgres, Qdrant Cloud Free Tier for RAG chatbot.
 5. **Bonus Constraints**: If pursuing extras, integrate seamlessly (e.g., subagents for reusable intelligence, Better-Auth for auth, per-chapter buttons for personalization/translation).
 6. **Deployment**: Live site required; no downtime during evaluation; version-controlled repo (GitHub) with clear setup instructions.
-7. **Timeline**: Align with hackathon deadlines; all features functional by submission.
+7. **Timeline**: All features must be functional by project deadline with proper version control and documentation.
 
 ## Success Criteria
 
@@ -75,4 +75,4 @@ This constitution governs the development of an AI-native textbook deployed as a
 
 This constitution supersedes all other practices for this project. All development activities must comply with these principles and standards. Any amendments to this constitution require proper documentation, approval, and migration planning. All pull requests and code reviews must verify compliance with these principles.
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
+**Version**: 1.0.1 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-09
