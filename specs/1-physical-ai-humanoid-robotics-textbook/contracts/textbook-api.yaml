@@ -1,0 +1,198 @@
+openapi: 3.0.0
+info:
+  title: Textbook API
+  description: API for the Physical AI & Humanoid Robotics Textbook platform
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Development server
+
+paths:
+  /api/chapters:
+    get:
+      summary: List all textbook chapters
+      description: Retrieve a list of all available textbook chapters
+      responses:
+        '200':
+          description: List of chapters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Chapter'
+        '500':
+          description: Server error
+
+  /api/chapters/{slug}:
+    get:
+      summary: Get a specific chapter
+      description: Retrieve the content of a specific textbook chapter
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+          description: URL-friendly identifier for the chapter
+      responses:
+        '200':
+          description: Chapter content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChapterWithContent'
+        '404':
+          description: Chapter not found
+        '500':
+          description: Server error
+
+  /api/chapters/{slug}/progress:
+    post:
+      summary: Update user progress for a chapter
+      description: Update the progress percentage for a user in a specific chapter
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+          description: URL-friendly identifier for the chapter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProgressUpdate'
+      responses:
+        '200':
+          description: Progress updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProgress'
+        '400':
+          description: Invalid progress data
+        '401':
+          description: Unauthorized
+        '404':
+          description: Chapter not found
+        '500':
+          description: Server error
+
+  /api/search:
+    get:
+      summary: Search textbook content
+      description: Search across all textbook chapters
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Search query string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+          description: Maximum number of results to return
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SearchResult'
+        '500':
+          description: Server error
+
+components:
+  schemas:
+    Chapter:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        slug:
+          type: string
+        difficulty_level:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        word_count:
+          type: integer
+        reading_time:
+          type: integer
+        order:
+          type: integer
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    ChapterWithContent:
+      allOf:
+        - $ref: '#/components/schemas/Chapter'
+      properties:
+        content:
+          type: string
+        content_urdu:
+          type: string
+
+    ProgressUpdate:
+      type: object
+      properties:
+        progress_percentage:
+          type: integer
+          minimum: 0
+          maximum: 100
+        time_spent_seconds:
+          type: integer
+
+    UserProgress:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        chapter_id:
+          type: string
+          format: uuid
+        progress_percentage:
+          type: integer
+          minimum: 0
+          maximum: 100
+        time_spent_seconds:
+          type: integer
+        completed:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    SearchResult:
+      type: object
+      properties:
+        chapter_id:
+          type: string
+          format: uuid
+        chapter_title:
+          type: string
+        content_snippet:
+          type: string
+        relevance_score:
+          type: number
+          format: float
