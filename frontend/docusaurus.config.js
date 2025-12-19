@@ -65,19 +65,6 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-    // Plugin for client-side modules
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        fromExtensions: ['html'],
-        redirects: [
-          {
-            to: '/textbook/intro',
-            from: ['/'],
-          },
-        ],
-      },
-    ],
   ],
 
   themeConfig:

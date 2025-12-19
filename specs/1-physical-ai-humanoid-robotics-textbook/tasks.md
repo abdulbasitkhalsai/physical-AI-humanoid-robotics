@@ -67,18 +67,24 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 - [X] T015 [P] [US1] Contract test for GET /api/chapters in backend/tests/contract/test_chapters.py
 - [X] T016 [P] [US1] Contract test for GET /api/chapters/{slug} in backend/tests/contract/test_chapters.py
-- [ ] T017 [P] [US1] Integration test for textbook content access in backend/tests/integration/test_textbook_access.py
+- [X] T017 [P] [US1] Integration test for textbook content access in backend/tests/integration/test_textbook_access.py
 
 ### Implementation for User Story 1
 
-- [ ] T018 [P] [US1] Create TextbookChapter model in backend/src/models/textbook_chapter.py
-- [ ] T019 [US1] Implement ContentService in backend/src/services/content_service.py (depends on T018)
-- [ ] T020 [US1] Implement textbook content endpoints in backend/src/api/textbook_routes.py
-- [ ] T021 [US1] Create TextbookViewer component in frontend/src/components/TextbookViewer/
-- [ ] T022 [US1] Create Chapter page in frontend/src/pages/Chapter/
-- [ ] T023 [US1] Add navigation and search capabilities in frontend/src/components/TextbookViewer/
-- [ ] T024 [US1] Integrate backend API with frontend components
-- [ ] T025 [US1] Add basic styling and responsive design for textbook content
+- [X] T018 [P] [US1] Create TextbookChapter model in backend/src/models/textbook_chapter.py
+- [X] T019 [US1] Implement ContentService in backend/src/services/content_service.py (depends on T018)
+- [X] T020 [US1] Implement textbook content endpoints in backend/src/api/content_routes.py
+- [X] T021 [US1] Create TextbookViewer component in frontend/src/components/TextbookViewer/
+- [X] T022 [US1] Create Chapter page in frontend/src/pages/Chapter/
+- [X] T023 [US1] Add navigation and search capabilities in frontend/src/components/TextbookViewer/
+- [X] T024 [US1] Integrate backend API with frontend components
+- [X] T025 [US1] Add basic styling and responsive design for textbook content
+- [X] T026 [US1] Fix chapter routing to support dynamic slug-based navigation
+  - Docusaurus must support routes of the form /chapter/:slug
+  - Replace static Chapter page with dynamic route using file-based routing
+  - Use Docusaurus [param].jsx syntax instead of redirects
+  - Ensure compatibility with existing TextbookViewer slug resolution logic
+  - No backend changes required
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -92,19 +98,19 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 ### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T026 [P] [US2] Contract test for technical proficiency assessment endpoint in backend/tests/contract/test_personalization.py
-- [ ] T027 [P] [US2] Integration test for content adaptation based on user proficiency in backend/tests/integration/test_personalization.py
+- [ ] T027 [P] [US2] Contract test for technical proficiency assessment endpoint in backend/tests/contract/test_personalization.py
+- [ ] T028 [P] [US2] Integration test for content adaptation based on user proficiency in backend/tests/integration/test_personalization.py
 
 ### Implementation for User Story 2
 
-- [ ] T028 [P] [US2] Update User model with technical proficiency fields in backend/src/models/user.py
-- [ ] T029 [P] [US2] Create UserProgress model in backend/src/models/user_progress.py
-- [ ] T030 [US2] Implement PersonalizationService in backend/src/services/personalization_service.py (depends on T028, T029)
-- [ ] T031 [US2] Implement proficiency assessment endpoint in backend/src/api/textbook_routes.py
-- [ ] T032 [US2] Create Personalization component in frontend/src/components/Personalization/
-- [ ] T033 [US2] Add content adaptation logic in frontend/src/components/TextbookViewer/
-- [ ] T034 [US2] Implement progress tracking functionality
-- [ ] T035 [US2] Integrate with User Story 1 components for content adaptation
+- [ ] T029 [P] [US2] Update User model with technical proficiency fields in backend/src/models/user.py
+- [ ] T030 [P] [US2] Create UserProgress model in backend/src/models/user_progress.py
+- [ ] T031 [US2] Implement PersonalizationService in backend/src/services/personalization_service.py (depends on T029, T030)
+- [ ] T032 [US2] Implement proficiency assessment endpoint in backend/src/api/textbook_routes.py
+- [ ] T033 [US2] Create Personalization component in frontend/src/components/Personalization/
+- [ ] T034 [US2] Add content adaptation logic in frontend/src/components/TextbookViewer/
+- [ ] T035 [US2] Implement progress tracking functionality
+- [ ] T036 [US2] Integrate with User Story 1 components for content adaptation
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -118,19 +124,19 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 ### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T036 [P] [US3] Contract test for POST /api/chat in backend/tests/contract/test_chatbot.py
-- [ ] T037 [P] [US3] Integration test for RAG functionality in backend/tests/integration/test_chatbot.py
+- [ ] T037 [P] [US3] Contract test for POST /api/chat in backend/tests/contract/test_chatbot.py
+- [ ] T038 [P] [US3] Integration test for RAG functionality in backend/tests/integration/test_chatbot.py
 
 ### Implementation for User Story 3
 
-- [ ] T038 [P] [US3] Create ChatbotSession model in backend/src/models/chatbot_session.py
-- [ ] T039 [P] [US3] Create ChatbotMessage model in backend/src/models/chatbot_message.py
-- [ ] T040 [US3] Implement RAGService in backend/src/services/rag_service.py (depends on T038, T039)
-- [ ] T041 [US3] Implement chatbot endpoint in backend/src/api/chatbot_routes.py
-- [ ] T042 [US3] Create Chatbot component in frontend/src/components/Chatbot/
-- [ ] T043 [US3] Implement chat interface with message history
-- [ ] T044 [US3] Add fallback response handling for out-of-scope questions
-- [ ] T045 [US3] Integrate with textbook content for RAG functionality
+- [ ] T039 [P] [US3] Create ChatbotSession model in backend/src/models/chatbot_session.py
+- [ ] T040 [P] [US3] Create ChatbotMessage model in backend/src/models/chatbot_message.py
+- [ ] T041 [US3] Implement RAGService in backend/src/services/rag_service.py (depends on T039, T040)
+- [ ] T042 [US3] Implement chatbot endpoint in backend/src/api/chatbot_routes.py
+- [ ] T043 [US3] Create Chatbot component in frontend/src/components/Chatbot/
+- [ ] T044 [US3] Implement chat interface with message history
+- [ ] T045 [US3] Add fallback response handling for out-of-scope questions
+- [ ] T046 [US3] Integrate with textbook content for RAG functionality
 
 **Checkpoint**: At this point, User Stories 1, 2 AND 3 should all work independently
 
@@ -144,19 +150,19 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 ### Tests for User Story 4 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T046 [P] [US4] Contract test for POST /api/translate in backend/tests/contract/test_translation.py
-- [ ] T047 [P] [US4] Integration test for Urdu translation functionality in backend/tests/integration/test_translation.py
+- [ ] T047 [P] [US4] Contract test for POST /api/translate in backend/tests/contract/test_translation.py
+- [ ] T048 [P] [US4] Integration test for Urdu translation functionality in backend/tests/integration/test_translation.py
 
 ### Implementation for User Story 4
 
-- [ ] T048 [P] [US4] Create TranslationCache model in backend/src/models/translation_cache.py
-- [ ] T049 [US4] Implement TranslationService in backend/src/services/translation_service.py (depends on T048)
-- [ ] T050 [US4] Implement translation endpoint in backend/src/api/translation_routes.py
-- [ ] T051 [US4] Create Translation component in frontend/src/components/Translation/
-- [ ] T052 [US4] Add translation toggle button to textbook viewer
-- [ ] T053 [US4] Implement content switching between English and Urdu
-- [ ] T054 [US4] Handle technical terms with English explanations in parentheses
-- [ ] T055 [US4] Add caching mechanism for translated content
+- [ ] T049 [P] [US4] Create TranslationCache model in backend/src/models/translation_cache.py
+- [ ] T050 [US4] Implement TranslationService in backend/src/services/translation_service.py (depends on T049)
+- [ ] T051 [US4] Implement translation endpoint in backend/src/api/translation_routes.py
+- [ ] T052 [US4] Create Translation component in frontend/src/components/Translation/
+- [ ] T053 [US4] Add translation toggle button to textbook viewer
+- [ ] T054 [US4] Implement content switching between English and Urdu
+- [ ] T055 [US4] Handle technical terms with English explanations in parentheses
+- [ ] T056 [US4] Add caching mechanism for translated content
 
 **Checkpoint**: At this point, User Stories 1, 2, 3 AND 4 should all work independently
 
@@ -170,22 +176,22 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 ### Tests for User Story 5 (OPTIONAL - only if tests requested) ⚠️
 
-- [ ] T056 [P] [US5] Contract test for POST /api/auth/register in backend/tests/contract/test_auth.py
-- [ ] T057 [P] [US5] Contract test for POST /api/auth/login in backend/tests/contract/test_auth.py
-- [ ] T058 [P] [US5] Contract test for GET /api/user/progress in backend/tests/contract/test_progress.py
-- [ ] T059 [P] [US5] Integration test for user account management in backend/tests/integration/test_auth.py
+- [ ] T057 [P] [US5] Contract test for POST /api/auth/register in backend/tests/contract/test_auth.py
+- [ ] T058 [P] [US5] Contract test for POST /api/auth/login in backend/tests/contract/test_auth.py
+- [ ] T059 [P] [US5] Contract test for GET /api/user/progress in backend/tests/contract/test_progress.py
+- [ ] T060 [P] [US5] Integration test for user account management in backend/tests/integration/test_auth.py
 
 ### Implementation for User Story 5
 
-- [ ] T060 [P] [US5] Complete User model with all required fields in backend/src/models/user.py
-- [ ] T061 [P] [US5] Implement user registration endpoint in backend/src/api/auth_routes.py
-- [ ] T062 [P] [US5] Implement user login endpoint in backend/src/api/auth_routes.py
-- [ ] T063 [US5] Implement user progress endpoints in backend/src/api/auth_routes.py
-- [ ] T064 [US5] Create Auth components in frontend/src/components/Auth/
-- [ ] T065 [US5] Create Dashboard page in frontend/src/pages/Dashboard/
-- [ ] T066 [US5] Add progress tracking and retrieval functionality
-- [ ] T067 [US5] Implement data retention policy (5-year deletion) in backend/src/services/auth_service.py
-- [ ] T068 [US5] Integrate with all previous user stories for personalized experience
+- [ ] T061 [P] [US5] Complete User model with all required fields in backend/src/models/user.py
+- [ ] T062 [P] [US5] Implement user registration endpoint in backend/src/api/auth_routes.py
+- [ ] T063 [P] [US5] Implement user login endpoint in backend/src/api/auth_routes.py
+- [ ] T064 [US5] Implement user progress endpoints in backend/src/api/auth_routes.py
+- [ ] T065 [US5] Create Auth components in frontend/src/components/Auth/
+- [ ] T066 [US5] Create Dashboard page in frontend/src/pages/Dashboard/
+- [ ] T067 [US5] Add progress tracking and retrieval functionality
+- [ ] T068 [US5] Implement data retention policy (5-year deletion) in backend/src/services/auth_service.py
+- [ ] T069 [US5] Integrate with all previous user stories for personalized experience
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -195,15 +201,15 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T069 [P] Documentation updates in docs/
-- [ ] T070 Code cleanup and refactoring across all modules
-- [ ] T071 Performance optimization for all user stories
-- [ ] T072 [P] Additional unit tests in backend/tests/unit/ and frontend/tests/
-- [ ] T073 Security hardening and validation
-- [ ] T074 Run quickstart.md validation to ensure deployment works
-- [ ] T075 Add comprehensive error handling and validation across all endpoints
-- [ ] T076 Performance testing for 1000+ concurrent users
-- [ ] T077 Final integration testing of all user stories together
+- [ ] T070 [P] Documentation updates in docs/
+- [ ] T071 Code cleanup and refactoring across all modules
+- [ ] T072 Performance optimization for all user stories
+- [ ] T073 [P] Additional unit tests in backend/tests/unit/ and frontend/tests/
+- [ ] T074 Security hardening and validation
+- [ ] T075 Run quickstart.md validation to ensure deployment works
+- [ ] T076 Add comprehensive error handling and validation across all endpoints
+- [ ] T077 Performance testing for 1000+ concurrent users
+- [ ] T078 Final integration testing of all user stories together
 
 ---
 
@@ -243,9 +249,7 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 - Models within a story marked [P] can run in parallel
 - Different user stories can be worked on in parallel by different team members
 
----
-
-## Parallel Example: User Story 1
+### Parallel Example: User Story 1
 
 ```bash
 # Launch all tests for User Story 1 together (if tests requested):

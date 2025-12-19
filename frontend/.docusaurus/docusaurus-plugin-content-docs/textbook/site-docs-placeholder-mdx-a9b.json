@@ -1,0 +1,15 @@
+{
+  "id": "placeholder",
+  "title": "Welcome to the Physical AI Textbook",
+  "description": "",
+  "source": "@site/docs/placeholder.mdx",
+  "sourceDirName": ".",
+  "slug": "/placeholder",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/placeholder",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar"
+}

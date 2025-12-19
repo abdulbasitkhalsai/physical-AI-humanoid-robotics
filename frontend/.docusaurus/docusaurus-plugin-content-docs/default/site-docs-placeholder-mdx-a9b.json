@@ -1,0 +1,18 @@
+{
+  "id": "placeholder",
+  "title": "Welcome to the Physical AI Textbook",
+  "description": "",
+  "source": "@site/docs/placeholder.mdx",
+  "sourceDirName": ".",
+  "slug": "/placeholder",
+  "permalink": "/physical-AI-humanoid-robotics/docs/placeholder",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/placeholder.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar"
+}

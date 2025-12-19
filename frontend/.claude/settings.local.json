@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find .docusaurus -name \"*.js\" -exec grep -l \"function\\|FunctionDeclaration\" {} ;)",
+      "Bash(rm -rf .docusaurus)",
+      "Bash(npm run clear)",
+      "Bash(npm start)"
+    ]
+  }
+}

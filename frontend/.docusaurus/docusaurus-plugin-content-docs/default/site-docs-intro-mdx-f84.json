@@ -1,0 +1,22 @@
+{
+  "id": "intro",
+  "title": "Introduction",
+  "description": "Welcome to the Physical AI & Humanoid Robotics Textbook. This interactive textbook provides comprehensive coverage of physical artificial intelligence and humanoid robotics concepts, applications, and implementation.",
+  "source": "@site/docs/intro.mdx",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/physical-AI-humanoid-robotics/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction"
+  },
+  "sidebar": "tutorialSidebar"
+}

@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from .api import content_routes, auth_routes, chatbot_routes, user_routes, translation_routes
+from .api import content_routes
 from .database.connection import engine
 from .utils.logging import setup_logging
 from .utils.error_handlers import add_error_handlers
@@ -48,10 +48,10 @@ app.add_middleware(
 
 # Include API routes
 app.include_router(content_routes.router, prefix=settings.api_prefix, tags=["content"])
-app.include_router(auth_routes.router, prefix=f"{settings.api_prefix}/auth", tags=["authentication"])
-app.include_router(chatbot_routes.router, prefix=f"{settings.api_prefix}/chatbot", tags=["chatbot"])
-app.include_router(user_routes.router, prefix=f"{settings.api_prefix}/users", tags=["users"])
-app.include_router(translation_routes.router, prefix=f"{settings.api_prefix}/translate", tags=["translation"])
+# app.include_router(auth_routes.router, prefix=f"{settings.api_prefix}/auth", tags=["authentication"])
+# app.include_router(chatbot_routes.router, prefix=f"{settings.api_prefix}/chatbot", tags=["chatbot"])
+# app.include_router(user_routes.router, prefix=f"{settings.api_prefix}/users", tags=["users"])
+# app.include_router(translation_routes.router, prefix=f"{settings.api_prefix}/translate", tags=["translation"])
 
 # Add error handlers
 add_error_handlers(app)
