@@ -1,0 +1,26 @@
+{
+  "id": "chapters_bak/chapter-2-sensors-actuators",
+  "title": "Chapter 2 – Sensors, Actuators, and Embodiment in Physical AI",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters_bak/chapter-2-sensors-actuators.mdx",
+  "sourceDirName": "chapters_bak",
+  "slug": "/chapters_bak/chapter-2-sensors-actuators",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-2-sensors-actuators",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 2 – Sensors, Actuators, and Embodiment in Physical AI",
+    "slug": "chapter-2-sensors-actuators"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1 – Introduction to Physical AI and Humanoid Robotics",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-1-introduction"
+  },
+  "next": {
+    "title": "Chapter 3 – Control Systems and Motion Planning for Humanoid Robots",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-3-control-motion-planning"
+  }
+}

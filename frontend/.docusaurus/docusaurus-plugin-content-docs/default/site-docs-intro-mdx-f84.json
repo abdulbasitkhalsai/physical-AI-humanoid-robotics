@@ -18,5 +18,9 @@
     "sidebar_position": 1,
     "title": "Introduction"
   },
-  "sidebar": "tutorialSidebar"
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Chapter 1 – Introduction to Physical AI and Humanoid Robotics",
+    "permalink": "/physical-AI-humanoid-robotics/docs/chapters/chapter-1-introduction"
+  }
 }

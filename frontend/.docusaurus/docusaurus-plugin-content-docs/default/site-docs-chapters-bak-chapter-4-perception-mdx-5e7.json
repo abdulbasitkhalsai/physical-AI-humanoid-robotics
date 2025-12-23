@@ -1,0 +1,29 @@
+{
+  "id": "chapters_bak/chapter-4-perception",
+  "title": "Chapter 4 – Perception in Robotics (Vision, Touch, Proprioception)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters_bak/chapter-4-perception.mdx",
+  "sourceDirName": "chapters_bak",
+  "slug": "/chapters_bak/chapter-4-perception",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-4-perception",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/chapters_bak/chapter-4-perception.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Chapter 4 – Perception in Robotics (Vision, Touch, Proprioception)",
+    "slug": "chapter-4-perception"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3 – Control Systems and Motion Planning for Humanoid Robots",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-3-control-motion-planning"
+  },
+  "next": {
+    "title": "Chapter 5 – AI Agents in Physical Systems (Decision-Making and Autonomy)",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-5-ai-agents-decision-making"
+  }
+}

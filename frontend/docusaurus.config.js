@@ -24,6 +24,15 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    format: 'detect',
+    mermaid: false,
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+  },
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -45,6 +54,8 @@ const config = {
           editUrl: 'https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/',
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
+          path: 'docs',        // Source dir for doc files
+          routeBasePath: 'textbook', // URL Route for docs
         },
         blog: false, // Disable blog as per textbook focus
         theme: {
@@ -56,15 +67,6 @@ const config = {
 
   plugins: [
     // Plugin for custom remark/rehype processing if needed
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'textbook',
-        path: 'docs',
-        routeBasePath: 'textbook',
-        sidebarPath: require.resolve('./sidebars.js'),
-      },
-    ],
   ],
 
   themeConfig:
@@ -86,12 +88,12 @@ const config = {
             label: 'Textbook Chapters',
           },
           {
-            to: '/textbook/intro',
+            to: '/textbook/chapters/chapter-1-introduction',
             label: 'Textbook',
             position: 'left'
           },
           {
-            to: '/api-reference', // Placeholder for API reference
+            to: '/textbook/chapters/chapter-1-introduction', // Updated for MVP static site
             label: 'API',
             position: 'left'
           },
@@ -114,19 +116,19 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/textbook/intro',
+                to: '/textbook/chapters/chapter-1-introduction',
               },
               {
-                label: 'Physical AI Basics',
-                to: '/textbook/physical-ai-basics',
+                label: 'Sensors & Actuators',
+                to: '/textbook/chapters/chapter-2-sensors-actuators',
               },
               {
-                label: 'Humanoid Robotics',
-                to: '/textbook/humanoid-robotics',
+                label: 'Control & Motion Planning',
+                to: '/textbook/chapters/chapter-3-control-motion-planning',
               },
               {
-                label: 'Advanced Topics',
-                to: '/textbook/advanced-topics',
+                label: 'Perception',
+                to: '/textbook/chapters/chapter-4-perception',
               },
             ],
           },
@@ -135,15 +137,15 @@ const config = {
             items: [
               {
                 label: 'AI-Powered Chatbot',
-                to: '/textbook/intro#chatbot',
+                to: '/textbook/chapters/chapter-1-introduction', // Placeholder for MVP
               },
               {
                 label: 'Personalized Learning',
-                to: '/textbook/intro#personalization',
+                to: '/textbook/chapters/chapter-1-introduction', // Placeholder for MVP
               },
               {
                 label: 'Urdu Translation',
-                to: '/textbook/intro#translation',
+                to: '/textbook/chapters/chapter-1-introduction', // Available in MVP
               },
             ],
           },

@@ -52,6 +52,9 @@ class Settings(BaseSettings):
     max_upload_size: int = int(os.getenv("MAX_UPLOAD_SIZE", "10485760"))  # 10MB in bytes
     allowed_file_types: str = os.getenv("ALLOWED_FILE_TYPES", "application/pdf,text/plain,text/markdown")
 
+    # RAG settings
+    rag_enabled: bool = os.getenv("RAG_ENABLED", "false").lower() == "true"
+
     class Config:
         env_file = ".env"
         case_sensitive = True

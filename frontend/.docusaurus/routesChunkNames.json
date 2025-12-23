@@ -69,38 +69,52 @@
       "plugin": "plugin---physical-ai-humanoid-robotics-searchc-14-a45"
     }
   },
-  "/physical-AI-humanoid-robotics/docs-f89": {
+  "/physical-AI-humanoid-robotics/textbook-2b3": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---physical-ai-humanoid-robotics-docsaba-c0a"
+      "plugin": "plugin---physical-ai-humanoid-robotics-textbookaba-36f"
     }
   },
-  "/physical-AI-humanoid-robotics/docs-143": {
+  "/physical-AI-humanoid-robotics/textbook-3d7": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---physical-ai-humanoid-robotics-docs-085-2ae"
+    "__props": "__props---physical-ai-humanoid-robotics-textbookdb-9-b48"
   },
-  "/physical-AI-humanoid-robotics/docs-6ea": {
+  "/physical-AI-humanoid-robotics/textbook-801": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/physical-AI-humanoid-robotics/docs/intro-47f": {
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-1-introduction-17d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---physical-ai-humanoid-robotics-docs-introf-84-63b"
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-1-introduction-3-aa-855"
   },
-  "/physical-AI-humanoid-robotics/textbook-e26": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-2-sensors-actuators-9e0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-2-sensors-actuators-15-d-2a7"
+  },
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-3-control-motion-planning-bb1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-3-control-motion-planningb-5-f-144"
+  },
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-4-perception-d1f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-4-perception-142-e79"
+  },
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-5-ai-agents-decision-making-7d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-5-ai-agents-decision-making-49-f-ee8"
+  },
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-6-human-robot-interaction-safety-010": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-6-human-robot-interaction-safety-75-f-7e3"
+  },
+  "/physical-AI-humanoid-robotics/textbook/chapters/chapter-7-future-work-humanoid-robots-378": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---physical-ai-humanoid-robotics-textbook-chapters-chapter-7-future-work-humanoid-robotsaea-a77"
+  },
+  "/physical-AI-humanoid-robotics/-cd0": {
+    "__comp": "__comp---site-src-pages-index-jsx-9-dd-cb1",
     "__context": {
-      "plugin": "plugin---physical-ai-humanoid-robotics-textbookaa-0-ca7"
-    }
-  },
-  "/physical-AI-humanoid-robotics/textbook-02e": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---physical-ai-humanoid-robotics-textbook-2-a-0-0c2"
-  },
-  "/physical-AI-humanoid-robotics/textbook-f94": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
-  },
-  "/physical-AI-humanoid-robotics/textbook/intro-565": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---physical-ai-humanoid-robotics-docs-introf-84-63b"
+      "plugin": "plugin---physical-ai-humanoid-robotics-chapter-a-74-bc6"
+    },
+    "config": "config---physical-ai-humanoid-robotics-chapter-5-e-9-a74"
   }
 }

@@ -90,7 +90,31 @@ description: "Task list for Physical AI & Humanoid Robotics Textbook implementat
 
 ---
 
-## Phase 4: User Story 2 - Get Personalized Learning Experience (Priority: P1)
+## Phase 4: MVP Deployment Preparation (Priority: P1) 🎯 MVP
+
+**Goal**: Prepare and deploy the static textbook site to GitHub Pages as the MVP release
+
+**Independent Test**: The static site is deployed and accessible at the GitHub Pages URL with all textbook content available.
+
+### Implementation for MVP Deployment
+
+- [ ] T027 [MVP] Update docusaurus.config.js for GitHub Pages deployment settings
+- [ ] T028 [MVP] Configure GitHub Actions workflow for automated deployment
+- [ ] T029 [MVP] Test local build to ensure all chapters render correctly
+- [ ] T030 [MVP] Verify Urdu translation functionality works in static build
+- [ ] T031 [MVP] Clean up unused backend dependencies and configurations
+- [ ] T032 [MVP] Update README with deployment instructions
+- [ ] T033 [MVP] Deploy MVP to GitHub Pages
+
+**Checkpoint**: MVP static textbook site is deployed and publicly accessible
+
+---
+
+## Phase 5: Future Iterations (Post-MVP)
+
+The following user stories will be implemented in future iterations after the MVP deployment:
+
+## Phase 5: User Story 2 - Get Personalized Learning Experience (Priority: P1)
 
 **Goal**: Enable learners to have textbook content adapt to their technical proficiency level so they can learn effectively without being overwhelmed or under-challenged
 
@@ -277,11 +301,12 @@ Task: "Create TextbookChapter model in backend/src/models/textbook_chapter.py"
 
 1. Complete Setup + Foundational → Foundation ready
 2. Add User Story 1 → Test independently → Deploy/Demo (MVP!)
-3. Add User Story 2 → Test independently → Deploy/Demo
-4. Add User Story 3 → Test independently → Deploy/Demo
-5. Add User Story 4 → Test independently → Deploy/Demo
-6. Add User Story 5 → Test independently → Deploy/Demo
-7. Each story adds value without breaking previous stories
+3. Add MVP Deployment tasks (T027-T033) → Deploy static textbook to GitHub Pages
+4. Future iterations: Add User Story 2 → Test independently → Deploy/Demo
+5. Future iterations: Add User Story 3 → Test independently → Deploy/Demo
+6. Future iterations: Add User Story 4 → Test independently → Deploy/Demo
+7. Future iterations: Add User Story 5 → Test independently → Deploy/Demo
+8. Each story adds value without breaking previous stories
 
 ### Parallel Team Strategy
 

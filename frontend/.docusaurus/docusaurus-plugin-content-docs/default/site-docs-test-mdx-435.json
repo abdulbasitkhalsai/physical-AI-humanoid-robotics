@@ -1,0 +1,25 @@
+{
+  "id": "test",
+  "title": "Test Chapter",
+  "description": "This is a test chapter to verify the build works properly.",
+  "source": "@site/docs/test.mdx",
+  "sourceDirName": ".",
+  "slug": "/test-chapter",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/test-chapter",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/test.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Test Chapter",
+    "slug": "test-chapter"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 7 – Future of Work with Humanoid Robots",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-7-future-work-humanoid-robots"
+  }
+}

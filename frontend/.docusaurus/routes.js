@@ -58,20 +58,56 @@ export default [
     exact: true
   },
   {
-    path: '/physical-AI-humanoid-robotics/docs',
-    component: ComponentCreator('/physical-AI-humanoid-robotics/docs', 'f89'),
+    path: '/physical-AI-humanoid-robotics/textbook',
+    component: ComponentCreator('/physical-AI-humanoid-robotics/textbook', '2b3'),
     routes: [
       {
-        path: '/physical-AI-humanoid-robotics/docs',
-        component: ComponentCreator('/physical-AI-humanoid-robotics/docs', '143'),
+        path: '/physical-AI-humanoid-robotics/textbook',
+        component: ComponentCreator('/physical-AI-humanoid-robotics/textbook', '3d7'),
         routes: [
           {
-            path: '/physical-AI-humanoid-robotics/docs',
-            component: ComponentCreator('/physical-AI-humanoid-robotics/docs', '6ea'),
+            path: '/physical-AI-humanoid-robotics/textbook',
+            component: ComponentCreator('/physical-AI-humanoid-robotics/textbook', '801'),
             routes: [
               {
-                path: '/physical-AI-humanoid-robotics/docs/intro',
-                component: ComponentCreator('/physical-AI-humanoid-robotics/docs/intro', '47f'),
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-1-introduction',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-1-introduction', '17d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-2-sensors-actuators',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-2-sensors-actuators', '9e0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-3-control-motion-planning',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-3-control-motion-planning', 'bb1'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-4-perception',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-4-perception', 'd1f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-5-ai-agents-decision-making',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-5-ai-agents-decision-making', '7d9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-6-human-robot-interaction-safety',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-6-human-robot-interaction-safety', '010'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/physical-AI-humanoid-robotics/textbook/chapters/chapter-7-future-work-humanoid-robots',
+                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/chapters/chapter-7-future-work-humanoid-robots', '378'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -82,28 +118,9 @@ export default [
     ]
   },
   {
-    path: '/physical-AI-humanoid-robotics/textbook',
-    component: ComponentCreator('/physical-AI-humanoid-robotics/textbook', 'e26'),
-    routes: [
-      {
-        path: '/physical-AI-humanoid-robotics/textbook',
-        component: ComponentCreator('/physical-AI-humanoid-robotics/textbook', '02e'),
-        routes: [
-          {
-            path: '/physical-AI-humanoid-robotics/textbook',
-            component: ComponentCreator('/physical-AI-humanoid-robotics/textbook', 'f94'),
-            routes: [
-              {
-                path: '/physical-AI-humanoid-robotics/textbook/intro',
-                component: ComponentCreator('/physical-AI-humanoid-robotics/textbook/intro', '565'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    path: '/physical-AI-humanoid-robotics/',
+    component: ComponentCreator('/physical-AI-humanoid-robotics/', 'cd0'),
+    exact: true
   },
   {
     path: '*',

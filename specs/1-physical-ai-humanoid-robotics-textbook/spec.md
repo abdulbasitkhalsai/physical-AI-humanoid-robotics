@@ -7,9 +7,9 @@
 
 ## User Scenarios & Testing *(mandatory)*
 
-### User Story 1 - Access Interactive Textbook Content (Priority: P1)
+### User Story 1 - Access Static Textbook Content (Priority: P1)
 
-As a student or researcher in robotics, I want to access a comprehensive Physical AI & Humanoid Robotics textbook with interactive features so that I can learn about advanced robotics concepts effectively.
+As a student or researcher in robotics, I want to access a comprehensive Physical AI & Humanoid Robotics textbook as a static web-based resource so that I can learn about advanced robotics concepts effectively.
 
 **Why this priority**: This is the core value proposition - without accessible, high-quality textbook content, the entire system fails to deliver its primary purpose.
 

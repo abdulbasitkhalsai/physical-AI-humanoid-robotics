@@ -1,0 +1,22 @@
+{
+  "id": "chapters_bak/chapter-1-introduction",
+  "title": "Chapter 1 – Introduction to Physical AI and Humanoid Robotics",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters_bak/chapter-1-introduction.mdx",
+  "sourceDirName": "chapters_bak",
+  "slug": "/chapters_bak/chapter-1-introduction",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-1-introduction",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 1 – Introduction to Physical AI and Humanoid Robotics",
+    "slug": "chapter-1-introduction"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Chapter 2 – Sensors, Actuators, and Embodiment in Physical AI",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-2-sensors-actuators"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "chapters_bak/chapter-7-future-work-humanoid-robots",
+  "title": "Chapter 7 – Future of Work with Humanoid Robots",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters_bak/chapter-7-future-work-humanoid-robots.mdx",
+  "sourceDirName": "chapters_bak",
+  "slug": "/chapters_bak/chapter-7-future-work-humanoid-robots",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-7-future-work-humanoid-robots",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/chapters_bak/chapter-7-future-work-humanoid-robots.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "title": "Chapter 7 – Future of Work with Humanoid Robots",
+    "slug": "chapter-7-future-work-humanoid-robots"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 6 – Human-Robot Interaction and Safety",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters_bak/chapter-6-human-robot-interaction-safety"
+  },
+  "next": {
+    "title": "Test Chapter",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/test-chapter"
+  }
+}

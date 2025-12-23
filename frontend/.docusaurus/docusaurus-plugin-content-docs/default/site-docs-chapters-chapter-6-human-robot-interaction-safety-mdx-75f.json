@@ -1,0 +1,29 @@
+{
+  "id": "chapters/chapter-6-human-robot-interaction-safety",
+  "title": "Chapter 6 – Human-Robot Interaction and Safety",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters/chapter-6-human-robot-interaction-safety.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter-6-human-robot-interaction-safety",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-6-human-robot-interaction-safety",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/chapters/chapter-6-human-robot-interaction-safety.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {
+    "title": "Chapter 6 – Human-Robot Interaction and Safety",
+    "slug": "chapter-6-human-robot-interaction-safety"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 5 – AI Agents in Physical Systems (Decision-Making and Autonomy)",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-5-ai-agents-decision-making"
+  },
+  "next": {
+    "title": "Chapter 7 – Future of Work with Humanoid Robots",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-7-future-work-humanoid-robots"
+  }
+}

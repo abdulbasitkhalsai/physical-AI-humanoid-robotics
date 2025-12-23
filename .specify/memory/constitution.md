@@ -3,7 +3,7 @@
 ## Project Overview
 Project: Create a Textbook for Teaching Physical AI & Humanoid Robotics Course
 
-This constitution governs the development of an AI-native textbook deployed as a dynamic web application. It ensures high-quality content, robust technical implementation, and integration of interactive AI features to support Panaversity's mission of teaching cutting-edge AI skills. All development must adhere to this framework to ensure quality and consistency.
+This constitution governs the development of a textbook deployed as a static web application using Docusaurus. It ensures high-quality content, robust technical implementation, and proper deployment to GitHub Pages to support Panaversity's mission of teaching cutting-edge AI skills. The MVP approach focuses on delivering core textbook content as a static site first, with advanced interactive features to be implemented in future iterations. All development must adhere to this framework to ensure quality and consistency.
 
 ## Core Principles
 
@@ -35,8 +35,8 @@ This constitution governs the development of an AI-native textbook deployed as a
    - Protect user data in compliance with basic privacy standards
 
 6. **AI Integration**:
-   - For RAG chatbot, ensure 95%+ accuracy on content-based queries
-   - For bonuses, validate subagents/skills reuse, personalization logic, and translation fidelity (e.g., via automated checks or manual sampling)
+   - MVP phase focuses on static content delivery; AI features (RAG chatbot, personalization, translation) will be implemented in future iterations
+   - For future RAG chatbot, ensure 95%+ accuracy on content-based queries
 
 ### Bonus Feature Standards:
 - **Signup/Signin**: Collect user background (software/hardware) ethically; no PII storage without consent.
@@ -47,29 +47,30 @@ This constitution governs the development of an AI-native textbook deployed as a
 
 1. **Core Content Word Count**: 5,000-7,000 words (excluding code, docs, or auto-generated elements).
 2. **Minimum Sources**: 15 total (at least 10 academic + 5 technical).
-3. **Format**: Docusaurus-based website with Markdown chapters; deploy to GitHub Pages; optional PDF export for static version.
-4. **Tech Stack**: Must use Spec-Kit Plus, Claude Code for book creation; OpenAI Agents/ChatKit SDKs, FastAPI, Neon Serverless Postgres, Qdrant Cloud Free Tier for RAG chatbot.
-5. **Bonus Constraints**: If pursuing extras, integrate seamlessly (e.g., subagents for reusable intelligence, Better-Auth for auth, per-chapter buttons for personalization/translation).
-6. **Deployment**: Live site required; no downtime during evaluation; version-controlled repo (GitHub) with clear setup instructions.
-7. **Timeline**: All features must be functional by project deadline with proper version control and documentation.
+3. **Format**: Docusaurus-based static website with Markdown chapters; deploy to GitHub Pages; optional PDF export for static version.
+4. **Tech Stack**: Must use Spec-Kit Plus, Claude Code for book creation; Docusaurus for static site generation; backend services will be implemented in future iterations.
+5. **Bonus Constraints**: Advanced features (RAG chatbot, authentication, personalization, translation) will be implemented in future iterations after MVP deployment.
+6. **Deployment**: Static site deployed to GitHub Pages; no backend services required for MVP.
+7. **Timeline**: MVP must be functional by project deadline with proper version control and documentation.
 
 ## Success Criteria
 
 1. All claims (content and technical) verified against sources.
 2. Zero plagiarism detected in content or code.
-3. Passes fact-checking and code review (e.g., no critical bugs, successful end-to-end tests for chatbot and bonuses).
-4. Technical Success: Site deployed and functional.
+3. Passes fact-checking and content review (e.g., no critical bugs, successful static site deployment).
+4. Technical Success: Static site deployed and functional on GitHub Pages.
 5. Content Quality: Meets word count and source requirements.
-6. User Experience: Interactive features work as intended.
-7. Bonus Features: If implemented, meet the specified standards.
+6. User Experience: Textbook content is accessible and well-organized.
+7. MVP Requirements: Static Docusaurus site successfully deployed without backend dependencies.
 
 ## Development Guidelines
 
 1. **Spec-Driven Development**: Follow the Spec-Kit Plus methodology for all development.
-2. **Testing**: Implement unit and integration tests for all components.
+2. **Testing**: Focus on content validation and static site functionality for MVP.
 3. **Documentation**: Maintain clear documentation for setup, deployment, and usage.
 4. **Version Control**: Use Git with clear commit messages following conventional commits.
 5. **Code Reviews**: All code changes must be reviewed before merging.
+6. **MVP Focus**: Prioritize static content delivery and proper deployment over advanced interactive features.
 
 ## Governance
 

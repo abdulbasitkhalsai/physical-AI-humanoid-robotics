@@ -1,0 +1,74 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * locally scoped CSS files
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.featuresSection {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.chaptersOverview {
+  padding: 4rem 0;
+}
+
+.chaptersOverview h2 {
+  margin-bottom: 2rem;
+}
+
+.card {
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.ctaSection {
+  padding: 4rem 0;
+  background-color: #2b3137;
+  color: white;
+}
+
+.ctaSection h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ctaSection p {
+  color: #e9ecef;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 996px) {
+  .featuresSection,
+  .chaptersOverview,
+  .ctaSection {
+    padding: 2rem 0;
+  }
+}

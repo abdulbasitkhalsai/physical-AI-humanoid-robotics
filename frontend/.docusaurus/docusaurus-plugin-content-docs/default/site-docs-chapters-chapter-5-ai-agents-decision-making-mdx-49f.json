@@ -1,0 +1,29 @@
+{
+  "id": "chapters/chapter-5-ai-agents-decision-making",
+  "title": "Chapter 5 – AI Agents in Physical Systems (Decision-Making and Autonomy)",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters/chapter-5-ai-agents-decision-making.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter-5-ai-agents-decision-making",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-5-ai-agents-decision-making",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/docs/chapters/chapter-5-ai-agents-decision-making.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {
+    "title": "Chapter 5 – AI Agents in Physical Systems (Decision-Making and Autonomy)",
+    "slug": "chapter-5-ai-agents-decision-making"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4 – Perception in Robotics (Vision, Touch, Proprioception)",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-4-perception"
+  },
+  "next": {
+    "title": "Chapter 6 – Human-Robot Interaction and Safety",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-6-human-robot-interaction-safety"
+  }
+}

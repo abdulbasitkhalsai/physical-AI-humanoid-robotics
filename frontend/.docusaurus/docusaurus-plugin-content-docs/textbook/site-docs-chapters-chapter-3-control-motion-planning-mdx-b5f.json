@@ -1,0 +1,26 @@
+{
+  "id": "chapters/chapter-3-control-motion-planning",
+  "title": "Chapter 3 – Control Systems and Motion Planning for Humanoid Robots",
+  "description": "Learning Objectives",
+  "source": "@site/docs/chapters/chapter-3-control-motion-planning.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter-3-control-motion-planning",
+  "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-3-control-motion-planning",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 – Control Systems and Motion Planning for Humanoid Robots",
+    "slug": "chapter-3-control-motion-planning"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2 – Sensors, Actuators, and Embodiment in Physical AI",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-2-sensors-actuators"
+  },
+  "next": {
+    "title": "Chapter 4 – Perception in Robotics (Vision, Touch, Proprioception)",
+    "permalink": "/physical-AI-humanoid-robotics/textbook/chapters/chapter-4-perception"
+  }
+}

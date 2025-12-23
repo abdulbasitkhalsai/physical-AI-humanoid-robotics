@@ -7,18 +7,18 @@
 
 ## Summary
 
-The Physical AI & Humanoid Robotics Textbook is a web-based educational platform that provides interactive textbook content with AI-powered features. The system implements a Docusaurus-based frontend for content display with integrated RAG chatbot, personalization based on user technical proficiency, and Urdu translation capabilities. The backend uses FastAPI with Neon Serverless Postgres for user data and Qdrant Cloud for vector storage to enable the RAG functionality. The architecture supports public access to core content while requiring authentication for personalized features, meeting the functional requirements for textbook access, personalization, chatbot support, and multilingual capabilities.
+The Physical AI & Humanoid Robotics Textbook is a static web-based educational platform that provides comprehensive textbook content. The system implements a Docusaurus-based frontend for content display with proper navigation and search capabilities. The MVP focuses on delivering static textbook content without backend dependencies. Advanced features such as RAG chatbot, personalization, and user authentication will be implemented in future iterations. The architecture prioritizes content delivery and proper deployment to GitHub Pages.
 
 ## Technical Context
 
-**Language/Version**: Python 3.11, JavaScript/TypeScript for frontend
-**Primary Dependencies**: FastAPI, Docusaurus, Better-Auth, Qdrant Cloud, Neon Serverless Postgres, OpenAI API
-**Storage**: Neon Serverless Postgres for user data, Qdrant Cloud for vector embeddings
-**Testing**: pytest for backend, Jest for frontend, integration tests for RAG functionality
-**Target Platform**: Web application (Linux server deployment)
-**Project Type**: Web (frontend + backend architecture)
-**Performance Goals**: Page load times under 3 seconds, 90% of queries answered accurately, support 1000+ concurrent users
-**Constraints**: Must comply with WCAG 2.1 AA accessibility standards, 5-year automatic data deletion, 95% accuracy for Urdu translation
+**Language/Version**: JavaScript/TypeScript for frontend (MVP phase)
+**Primary Dependencies**: Docusaurus for static site generation, React for UI components
+**Storage**: Static content delivery (no database required for MVP)
+**Testing**: Jest for frontend, content validation for textbook chapters
+**Target Platform**: Static site deployment to GitHub Pages
+**Project Type**: Static web application (frontend only for MVP)
+**Performance Goals**: Page load times under 3 seconds, static content delivery
+**Constraints**: Must comply with WCAG 2.1 AA accessibility standards, multi-language support (English/Urdu) for MVP
 **Scale/Scope**: Educational platform for students and researchers in robotics, multi-language support (English/Urdu)
 
 ## Constitution Check
@@ -60,61 +60,29 @@ specs/1-physical-ai-humanoid-robotics-textbook/
 ### Source Code (repository root)
 
 ```text
-backend/
-├── src/
-│   ├── models/
-│   │   ├── user.py
-│   │   ├── textbook_chapter.py
-│   │   ├── user_progress.py
-│   │   └── chatbot_session.py
-│   ├── services/
-│   │   ├── auth_service.py
-│   │   ├── content_service.py
-│   │   ├── rag_service.py
-│   │   ├── translation_service.py
-│   │   └── personalization_service.py
-│   ├── api/
-│   │   ├── auth_routes.py
-│   │   ├── content_routes.py
-│   │   ├── chatbot_routes.py
-│   │   └── user_routes.py
-│   ├── database/
-│   │   ├── connection.py
-│   │   └── migrations/
-│   └── main.py
-└── tests/
-    ├── unit/
-    ├── integration/
-    └── contract/
-
 frontend/
 ├── docs/
 │   ├── chapters/
-│   │   ├── introduction.md
-│   │   ├── physical-ai-basics.md
-│   │   ├── humanoid-robotics.md
-│   │   └── advanced-topics.md
+│   │   ├── chapter-1-introduction.mdx
+│   │   ├── chapter-2-sensors-actuators.mdx
+│   │   ├── chapter-3-control-motion-planning.mdx
+│   │   ├── chapter-4-perception.mdx
+│   │   ├── chapter-5-ai-agents-decision-making.mdx
+│   │   ├── chapter-6-human-robot-interaction-safety.mdx
+│   │   └── chapter-7-future-work-humanoid-robots.mdx
 │   └── sidebar.json
 ├── src/
 │   ├── components/
-│   │   ├── TextbookViewer/
-│   │   ├── Chatbot/
-│   │   ├── TranslationToggle/
-│   │   └── Personalization/
-│   ├── pages/
+│   │   └── TextbookViewer/
 │   ├── css/
 │   └── theme/
 ├── static/
 └── docusaurus.config.js
-
-contracts/
-├── textbook-api.yaml
-├── chatbot-api.yaml
-├── auth-api.yaml
-└── translation-api.yaml
 ```
 
-**Structure Decision**: Web application with separate backend and frontend components. The backend uses FastAPI to provide REST APIs for authentication, content management, chatbot functionality, and user data. The frontend uses Docusaurus for textbook content display with React components for interactive features. This structure follows the requirement for a Docusaurus-based interface (FR-001) while allowing for complex backend functionality needed for RAG chatbot, personalization, and user management.
+**Note**: Backend components will be implemented in future iterations after MVP deployment.
+
+**Structure Decision**: Static web application focused on content delivery using Docusaurus for textbook content display. This structure follows the requirement for a Docusaurus-based interface (FR-001) while prioritizing content delivery and proper deployment to GitHub Pages for the MVP phase. Backend functionality will be implemented in future iterations.
 
 ## Complexity Tracking
 

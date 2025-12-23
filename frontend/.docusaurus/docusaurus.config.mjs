@@ -13,6 +13,23 @@ export default {
   "projectName": "physical-AI-humanoid-robotics",
   "deploymentBranch": "gh-pages",
   "onBrokenLinks": "throw",
+  "markdown": {
+    "format": "detect",
+    "mermaid": false,
+    "mdx1Compat": {
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
+    },
+    "emoji": true,
+    "anchors": {
+      "maintainCase": false
+    },
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
+    }
+  },
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -30,7 +47,9 @@ export default {
           "sidebarPath": "/mnt/c/Users/finance01/Documents/WD/agentic-ai/specify-plus/hackathon-dec25/physical-AI-humanoid-robotics/frontend/sidebars.js",
           "editUrl": "https://github.com/agentic-ai/physical-AI-humanoid-robotics/edit/main/",
           "showLastUpdateTime": true,
-          "showLastUpdateAuthor": true
+          "showLastUpdateAuthor": true,
+          "path": "docs",
+          "routeBasePath": "textbook"
         },
         "blog": false,
         "theme": {
@@ -39,17 +58,7 @@ export default {
       }
     ]
   ],
-  "plugins": [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        "id": "textbook",
-        "path": "docs",
-        "routeBasePath": "textbook",
-        "sidebarPath": "/mnt/c/Users/finance01/Documents/WD/agentic-ai/specify-plus/hackathon-dec25/physical-AI-humanoid-robotics/frontend/sidebars.js"
-      }
-    ]
-  ],
+  "plugins": [],
   "themeConfig": {
     "image": "img/textbook-social-card.jpg",
     "navbar": {
@@ -66,12 +75,12 @@ export default {
           "label": "Textbook Chapters"
         },
         {
-          "to": "/textbook/intro",
+          "to": "/textbook/chapters/chapter-1-introduction",
           "label": "Textbook",
           "position": "left"
         },
         {
-          "to": "/api-reference",
+          "to": "/textbook/chapters/chapter-1-introduction",
           "label": "API",
           "position": "left"
         },
@@ -97,19 +106,19 @@ export default {
           "items": [
             {
               "label": "Introduction",
-              "to": "/textbook/intro"
+              "to": "/textbook/chapters/chapter-1-introduction"
             },
             {
-              "label": "Physical AI Basics",
-              "to": "/textbook/physical-ai-basics"
+              "label": "Sensors & Actuators",
+              "to": "/textbook/chapters/chapter-2-sensors-actuators"
             },
             {
-              "label": "Humanoid Robotics",
-              "to": "/textbook/humanoid-robotics"
+              "label": "Control & Motion Planning",
+              "to": "/textbook/chapters/chapter-3-control-motion-planning"
             },
             {
-              "label": "Advanced Topics",
-              "to": "/textbook/advanced-topics"
+              "label": "Perception",
+              "to": "/textbook/chapters/chapter-4-perception"
             }
           ]
         },
@@ -118,15 +127,15 @@ export default {
           "items": [
             {
               "label": "AI-Powered Chatbot",
-              "to": "/textbook/intro#chatbot"
+              "to": "/textbook/chapters/chapter-1-introduction"
             },
             {
               "label": "Personalized Learning",
-              "to": "/textbook/intro#personalization"
+              "to": "/textbook/chapters/chapter-1-introduction"
             },
             {
               "label": "Urdu Translation",
-              "to": "/textbook/intro#translation"
+              "to": "/textbook/chapters/chapter-1-introduction"
             }
           ]
         },
@@ -425,22 +434,5 @@ export default {
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "format": "mdx",
-    "mermaid": false,
-    "emoji": true,
-    "mdx1Compat": {
-      "comments": true,
-      "admonitions": true,
-      "headingIds": true
-    },
-    "anchors": {
-      "maintainCase": false
-    },
-    "hooks": {
-      "onBrokenMarkdownLinks": "warn",
-      "onBrokenMarkdownImages": "throw"
-    }
-  }
+  "noIndex": false
 };
