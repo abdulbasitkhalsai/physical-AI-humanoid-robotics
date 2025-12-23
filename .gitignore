@@ -1,6 +1,7 @@
 frontend/.docusaurus/
 frontend/build/
 frontend/node_modules/
+backend/.venv/
 node_modules/
 .claude/
 .specify/
