@@ -1,0 +1,188 @@
+openapi: 3.0.0
+info:
+  title: Chatbot API
+  description: API for the RAG-powered chatbot in the Physical AI & Humanoid Robotics Textbook
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Development server
+
+paths:
+  /api/chatbot/query:
+    post:
+      summary: Ask a question to the chatbot
+      description: Submit a question to the RAG chatbot and receive an answer based on textbook content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatQuery'
+      responses:
+        '200':
+          description: Chatbot response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          description: Invalid query
+        '500':
+          description: Server error
+
+  /api/chatbot/sessions:
+    post:
+      summary: Create a new chatbot session
+      description: Start a new chatbot session for a user or anonymous visitor
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SessionCreate'
+      responses:
+        '200':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatbotSession'
+        '400':
+          description: Invalid session data
+        '500':
+          description: Server error
+
+  /api/chatbot/sessions/{sessionId}/messages:
+    get:
+      summary: Get chat history for a session
+      description: Retrieve all messages in a specific chatbot session
+      parameters:
+        - name: sessionId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Session identifier
+      responses:
+        '200':
+          description: Chat history
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ChatMessage'
+        '404':
+          description: Session not found
+        '500':
+          description: Server error
+
+components:
+  schemas:
+    ChatQuery:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          description: The user's question or message
+          example: "Explain the basics of humanoid robotics"
+        session_id:
+          type: string
+          description: Optional session identifier for maintaining conversation context
+        user_id:
+          type: string
+          format: uuid
+          description: Optional user identifier for authenticated users
+
+    ChatResponse:
+      type: object
+      properties:
+        response:
+          type: string
+          description: The chatbot's response to the query
+        context_chunks:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContextChunk'
+          description: The textbook content chunks used to generate the response
+        is_out_of_scope:
+          type: boolean
+          description: Whether the query was outside the textbook scope
+        suggested_resources:
+          type: array
+          items:
+            type: string
+          description: External resources suggested for out-of-scope queries
+        message_id:
+          type: string
+          format: uuid
+          description: Unique identifier for this response
+
+    ContextChunk:
+      type: object
+      properties:
+        chapter_id:
+          type: string
+          format: uuid
+        chapter_title:
+          type: string
+        content_snippet:
+          type: string
+        relevance_score:
+          type: number
+          format: float
+
+    ChatMessage:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        session_id:
+          type: string
+          format: uuid
+        role:
+          type: string
+          enum: [user, assistant]
+        content:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+        source_chunks:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContextChunk'
+
+    SessionCreate:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          description: Optional user identifier for authenticated users
+        session_token:
+          type: string
+          description: Optional token for anonymous sessions
+
+    ChatbotSession:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        session_token:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+        expires_at:
+          type: string
+          format: date-time

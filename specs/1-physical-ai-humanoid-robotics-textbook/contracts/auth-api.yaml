@@ -1,0 +1,242 @@
+openapi: 3.0.0
+info:
+  title: Authentication API
+  description: API for user authentication and profile management in the Physical AI & Humanoid Robotics Textbook
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Development server
+
+paths:
+  /api/auth/register:
+    post:
+      summary: Register a new user
+      description: Create a new user account with technical proficiency information
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegistration'
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid registration data
+        '409':
+          description: User with this email already exists
+        '500':
+          description: Server error
+
+  /api/auth/login:
+    post:
+      summary: Login to existing account
+      description: Authenticate user and return session token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLogin'
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        '400':
+          description: Invalid credentials
+        '401':
+          description: Authentication failed
+        '500':
+          description: Server error
+
+  /api/auth/profile:
+    get:
+      summary: Get user profile
+      description: Retrieve the authenticated user's profile information
+      responses:
+        '200':
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+
+    put:
+      summary: Update user profile
+      description: Update the authenticated user's profile information
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUpdate'
+      responses:
+        '200':
+          description: Profile updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid update data
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+
+  /api/auth/logout:
+    post:
+      summary: Logout user
+      description: End the current user session
+      responses:
+        '200':
+          description: Logout successful
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+
+  /api/auth/technical-assessment:
+    post:
+      summary: Submit technical proficiency assessment
+      description: Update user's technical proficiency levels
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TechnicalAssessment'
+      responses:
+        '200':
+          description: Assessment submitted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid assessment data
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server error
+
+components:
+  schemas:
+    UserRegistration:
+      type: object
+      required:
+        - email
+        - password
+        - name
+      properties:
+        email:
+          type: string
+          format: email
+          description: User's email address
+        password:
+          type: string
+          format: password
+          minLength: 8
+          description: User's password
+        name:
+          type: string
+          description: User's full name
+        technical_proficiency:
+          $ref: '#/components/schemas/TechnicalProficiency'
+
+    UserLogin:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          format: password
+
+    LoginResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: JWT access token
+        refresh_token:
+          type: string
+          description: JWT refresh token
+        user:
+          $ref: '#/components/schemas/User'
+
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        technical_proficiency:
+          $ref: '#/components/schemas/TechnicalProficiency'
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    UserUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+        technical_proficiency:
+          $ref: '#/components/schemas/TechnicalProficiency'
+
+    TechnicalProficiency:
+      type: object
+      properties:
+        mathematical_concepts:
+          type: string
+          enum: [beginner, intermediate, advanced]
+          description: User's proficiency in mathematical concepts
+        programming_experience:
+          type: string
+          enum: [beginner, intermediate, advanced]
+          description: User's programming experience level
+        prior_robotics_knowledge:
+          type: string
+          enum: [beginner, intermediate, advanced]
+          description: User's prior knowledge in robotics
+
+    TechnicalAssessment:
+      type: object
+      required:
+        - mathematical_concepts
+        - programming_experience
+        - prior_robotics_knowledge
+      properties:
+        mathematical_concepts:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        programming_experience:
+          type: string
+          enum: [beginner, intermediate, advanced]
+        prior_robotics_knowledge:
+          type: string
+          enum: [beginner, intermediate, advanced]
