@@ -4,3 +4,6 @@ frontend/node_modules/
 node_modules/
 .claude/
 .specify/
+.env
+backend/.env
+frontend/.env
