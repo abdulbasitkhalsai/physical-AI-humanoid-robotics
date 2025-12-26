@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repository
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -22,12 +22,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
 
       # 3️⃣ Install dependencies in frontend
       - name: Install dependencies
         working-directory: frontend
-        run: npm install
+        run: npm ci
 
       # 4️⃣ Build the Docusaurus site
       - name: Build Docusaurus site
