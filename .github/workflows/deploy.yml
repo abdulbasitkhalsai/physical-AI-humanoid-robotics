@@ -31,7 +31,7 @@ jobs:
       # 4️⃣ Build the Docusaurus site
       - name: Build Docusaurus site
         working-directory: frontend
-        run: npm run build
+        run: npm run build --verbose
 
       # 5️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
