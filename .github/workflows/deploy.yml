@@ -13,27 +13,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
-          cache-dependency-path: frontend/package-lock.json  # <- correct path relative to repo root
 
+      # 3️⃣ Install dependencies in frontend
       - name: Install dependencies
+        working-directory: frontend
         run: npm install
-        working-directory: frontend    # <- important: set working directory here
 
+      # 4️⃣ Build the Docusaurus site
       - name: Build Docusaurus site
+        working-directory: frontend
         run: npm run build
-        working-directory: frontend    # <- also here
 
+      # 5️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: frontend/build   # <- path to build folder
+          publish_dir: frontend/build
           publish_branch: gh-pages
