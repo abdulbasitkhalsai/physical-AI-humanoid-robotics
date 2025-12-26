@@ -13,27 +13,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # 3️⃣ Install dependencies in frontend
       - name: Install dependencies
         working-directory: frontend
-        run: npm ci
+        run: npm install
 
-      # 4️⃣ Build the Docusaurus site
       - name: Build Docusaurus site
         working-directory: frontend
-        run: npm run build --verbose
+        run: npm run build
 
-      # 5️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
